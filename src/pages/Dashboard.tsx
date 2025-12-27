@@ -1,4 +1,4 @@
-import { BarChart3, Users, Menu, Settings, TrendingUp, Activity } from 'lucide-react'
+import { BarChart3, Users, Menu, Settings, Activity } from 'lucide-react'
 import { Card, CardContent } from '../components/ui/card'
 import { cn } from '../lib/utils'
 import { LucideIcon } from 'lucide-react'
