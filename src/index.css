@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 195.1 100% 47.1%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html, body {
+    @apply h-full w-full m-0 p-0;
+    font-family: 'Vazirmatn', 'Tahoma', 'Arial', 'Segoe UI', 'Roboto', 
+      -apple-system, BlinkMacSystemFont, 'Oxygen', 'Ubuntu', 'Cantarell', 
+      'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-feature-settings: 'kern' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-gray-50 text-foreground overflow-hidden;
+  }
+  #root {
+    @apply w-full h-full overflow-hidden;
+  }
+  
+  /* RTL Support */
+  [dir="rtl"] {
+    direction: rtl;
+  }
+  
+  [dir="ltr"] {
+    direction: ltr;
+  }
+  
+  /* Persian/Farsi text improvements */
+  [dir="rtl"] * {
+    text-align: right;
+  }
+  
+  /* Better Persian number rendering */
+  [dir="rtl"] {
+    font-variant-numeric: normal;
+    -webkit-font-feature-settings: "kern" 1, "liga" 1;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  
+  /* Improve Persian text spacing */
+  [dir="rtl"] p,
+  [dir="rtl"] span,
+  [dir="rtl"] div,
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6 {
+    letter-spacing: 0;
+    word-spacing: 0.1em;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar for sidebar */
+  nav::-webkit-scrollbar {
+    width: 6px;
+  }
+  nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  nav::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
+  nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
